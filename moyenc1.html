@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #dff9e7;
+        }
+       h4{
+        position: relative;
+        left: 80px;
+       }
+       input{
+        position: relative;
+        left: 120px;
+       }
+       #cnnb{
+        height: 30px;
+        width: 300 px;
+        background-color:#dff9e7;
+        color: #1E5841;
+        border-radius: 15px;
+        margin-top: 20px;
+        position: relative;
+        left :80px ;
+        top:4px;
+        font-size: 20px;
+        }
+       #aboutus{
+
+        color:#c0f0cd;
+        position: relative;
+        }
+        #main {
+            background-color: #044206;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding: 3%;
+            border-radius: 15px;
+
+        }
+        #resulta {
+            color: #159537;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #c0f0cd;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        #aboutus {
+            color: #159537;
+        }
+        #titel1 {
+            text-align: center;
+            border-radius: 10px;
+            background-color: #c0f0cd;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+        }
+    
+    </style>
+</head>
+<nav>
+</nav>
+<body>
+<h1 id="titel1" style="color :#159537">Bonjour au Moyen Calculateur</h1>
+<h3 style="color:#edf5ef">ce programme peut calculer :la note qu'il faut pour obtenir la note que l'on souhaite au bac</h3>
+<hr>
+<div id="main"><h2 style="color :#c0f0cd">tapez les notes suivants</h2>
+    <h4 style="color:#edf5ef">la note de 1er semestre :</h4>
+    <input type="Number" id="nte-s1o"><br>
+    <h4 style="color:#edf5ef">la note de 2eme semestre    :</h4>
+    <input type="Number" id="note-2bacpc-s2"><br>
+    <h4 style="color:#edf5ef">la note de l'examan regionale:</h4>
+    <input type="Number" id="ote-nr1n"><br>
+    <h4 style="color:#edf5ef">la note que to besoin o la moyien generale:</h4>
+    <input type="Number" id="note-2bacpc-mc"><br>
+    <button id="cnnb">
+    calculer
+    </button>
+</div>
+<hr>
+<h2 id="resulta">la resultas</h2>
+<h1></h1>
+<hr>
+<h2 id="aboutus">about us :</h2>
+
+
+
+
+
+<script>
+ document.getElementById("cnnb").onclick = function(){
+    let ns1;
+    ns1 = document.getElementById("nte-s1o").value;
+    ns1 = Number(ns1);
+    let ns2;
+    ns2 = document.getElementById("note-2bacpc-s2").value;
+    ns2 = Number(ns2);
+    let mc ;
+    mc = (ns1 + ns2)/2
+    console.log(mc)
+    let NR;
+    NR = document.getElementById("ote-nr1n").value;
+    NR = Number(NR)
+    console.log(NR)
+    let mg ;
+    mg = document.getElementById("note-2bacpc-mc").value;
+    mg = Number(mg);
+    let nn;
+    nn = ((mg)*4 - NR - mc)/2
+    nn = Number(nn)
+    console.log(nn);
+    console.log(mg);
+    document.getElementById("resulta").innerHTML = "la note tu doit obtnient au l'exam nationnal :" + nn
+}
+
+</script>
+</body>
+
+</html>
